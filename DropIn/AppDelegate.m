@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BraintreePayPal.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +17,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [BTAppSwitch setReturnURLScheme:@"com.example.DropIn.payments"];
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    if ([url.scheme localizedCaseInsensitiveCompare:@"com.example.DropIn.payments"] == NSOrderedSame) {
+        return [BTAppSwitch handleOpenURL:url options:options];
+    }
+    return NO;
+}
+
+// If you support iOS 7 or 8, add the following method.
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    if ([url.scheme localizedCaseInsensitiveCompare:@"com.example.DropIn.payments"] == NSOrderedSame) {
+        return [BTAppSwitch handleOpenURL:url sourceApplication:sourceApplication];
+    }
+    return NO;
+}
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

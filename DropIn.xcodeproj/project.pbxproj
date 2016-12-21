@@ -15,6 +15,7 @@
 		6B0FDE711E0A9B3E00EEA52F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0FDE6F1E0A9B3E00EEA52F /* LaunchScreen.storyboard */; };
 		6B0FDE7C1E0A9B3E00EEA52F /* DropInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0FDE7B1E0A9B3E00EEA52F /* DropInTests.m */; };
 		6B0FDE871E0A9B3E00EEA52F /* DropInUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0FDE861E0A9B3E00EEA52F /* DropInUITests.m */; };
+		830AFA903FE0928149765315 /* libPods-DropIn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B3BDC25B183C5E4FD8C947 /* libPods-DropIn.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3204A856E9DEBC17A756E6E0 /* Pods-DropIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-DropIn/Pods-DropIn.release.xcconfig"; sourceTree = "<group>"; };
 		6B0FDE5E1E0A9B3E00EEA52F /* DropIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0FDE621E0A9B3E00EEA52F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B0FDE641E0A9B3E00EEA52F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		6B0FDE821E0A9B3E00EEA52F /* DropInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0FDE861E0A9B3E00EEA52F /* DropInUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropInUITests.m; sourceTree = "<group>"; };
 		6B0FDE881E0A9B3E00EEA52F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73B3BDC25B183C5E4FD8C947 /* libPods-DropIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EA88E7ED4708C539AA0B15 /* Pods-DropIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DropIn/Pods-DropIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830AFA903FE0928149765315 /* libPods-DropIn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6852B9E204E212570B869C3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA88E7ED4708C539AA0B15 /* Pods-DropIn.debug.xcconfig */,
+				3204A856E9DEBC17A756E6E0 /* Pods-DropIn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A4AF772112C525A66CD1378 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73B3BDC25B183C5E4FD8C947 /* libPods-DropIn.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6B0FDE551E0A9B3E00EEA52F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				6B0FDE7A1E0A9B3E00EEA52F /* DropInTests */,
 				6B0FDE851E0A9B3E00EEA52F /* DropInUITests */,
 				6B0FDE5F1E0A9B3E00EEA52F /* Products */,
+				6852B9E204E212570B869C3C /* Pods */,
+				6A4AF772112C525A66CD1378 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B0FDE8B1E0A9B3E00EEA52F /* Build configuration list for PBXNativeTarget "DropIn" */;
 			buildPhases = (
+				5482ECA7C89D9732A1FC7A6D /* [CP] Check Pods Manifest.lock */,
 				6B0FDE5A1E0A9B3E00EEA52F /* Sources */,
 				6B0FDE5B1E0A9B3E00EEA52F /* Frameworks */,
 				6B0FDE5C1E0A9B3E00EEA52F /* Resources */,
+				F2D68BF32EC100B153714462 /* [CP] Embed Pods Frameworks */,
+				BA360349327C3D82DAA224FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5482ECA7C89D9732A1FC7A6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA360349327C3D82DAA224FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DropIn/Pods-DropIn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D68BF32EC100B153714462 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DropIn/Pods-DropIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B0FDE5A1E0A9B3E00EEA52F /* Sources */ = {
@@ -420,6 +495,7 @@
 		};
 		6B0FDE8C1E0A9B3E00EEA52F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0EA88E7ED4708C539AA0B15 /* Pods-DropIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DropIn/Info.plist;
@@ -431,6 +507,7 @@
 		};
 		6B0FDE8D1E0A9B3E00EEA52F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3204A856E9DEBC17A756E6E0 /* Pods-DropIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DropIn/Info.plist;
@@ -505,6 +582,7 @@
 				6B0FDE8D1E0A9B3E00EEA52F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B0FDE8E1E0A9B3E00EEA52F /* Build configuration list for PBXNativeTarget "DropInTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +591,7 @@
 				6B0FDE901E0A9B3E00EEA52F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B0FDE911E0A9B3E00EEA52F /* Build configuration list for PBXNativeTarget "DropInUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +600,7 @@
 				6B0FDE931E0A9B3E00EEA52F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
